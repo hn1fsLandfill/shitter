@@ -1,0 +1,210 @@
+    :root {
+        --spritesheet: url("/css/larp-bars.png");
+        --checkmark: url("/css/checkmark.png");
+    }
+
+    body > nav {
+        -webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+        box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+
+        /* fallback */
+        background-color: #252525;
+
+        background-position: 0 0;
+        background-image: var(--spritesheet);
+        background-repeat: repeat-x;
+
+        height: 40px;
+    }
+
+    .inner-nav {
+        height: 40px !important;
+        max-height: 40px;
+        line-height: 40px;
+    }
+
+    body.fixed-nav .container {
+        padding-top: 48px;
+    }
+
+    .site-logo {
+        display: none;
+    }
+
+    /* avatars */
+
+    .profile-card-avatar > img {
+        border: 4px solid #fff;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    .profile-card-avatar {
+        width: 64px;
+        height: 64px;
+    }
+
+    .profile-card-avatar, .overlay-panel {
+        border: 1px solid lightgray;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.25);
+        box-shadow: 0 1px 1px rgba(0,0,0,.25);
+    }
+
+    .profile-card-avatar, .profile-card-avatar > img, .avatar.round {
+        border-radius: 5px !important;
+    }
+
+    body {
+        background-color: #f0f0f0;
+    }
+
+    .profile-card {
+        background-color: #f9f9f9;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+    }
+
+    /* early 2014 buttons */
+    button, [for=search-panel-toggle], .checkbox {
+        background-color: #ddd;
+        background-repeat: repeat-x;
+        background-image: -webkit-linear-gradient(#fff,#ddd);
+        background-image: linear-gradient(#fff,#ddd);
+        line-height: 18px;
+        color: #333;
+        text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+        border: 1px solid #ccc !important;
+        cursor: pointer;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.5);
+        box-shadow: 0 1px 0 rgba(255,255,255,0.5)
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    button:focus, button:hover, [for=search-panel-toggle]:hover, .checkbox:hover {
+        text-decoration: none;
+        background-color: #d8d8d8;
+        background-image: -webkit-linear-gradient(#f8f8f8,#d8d8d8);
+        background-image: linear-gradient(#f8f8f8,#d8d8d8);
+        border-color: #bbb;
+    }
+
+    button:active, [for=search-panel-toggle]:active, .checkbox:active {
+        color: #333;
+        border-color: #bbb;
+        background-image: none;
+        -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.1),0 1px 0 rgba(255,255,255,0.5);
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.1),0 1px 0 rgba(255,255,255,0.5)
+    }
+
+    button[disabled] {
+        color: #777;
+        text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+        cursor: default;
+        background-color: #ddd;
+        background-image: none;
+        border-color: #ccc;
+        opacity: .65
+    }
+
+    /* some ironing out */
+    .top-ref {
+        background: transparent;
+    }
+
+    select, .prefs-code, div[title=q] > input, .pref-input > input, .date-input > input {
+        border-radius: 4px;
+        box-shadow: 0 1px 0 rgba(255,255,255,0.5);
+        text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+        border: 1px solid #ccc !important;
+    }
+
+    .overlay-panel, .timeline-container > *, .timeline > div {
+        border-radius: 4px;
+    }
+
+    /* polls stuff */
+    .poll-meter {
+        border: 1px solid lightgray
+    }
+    .poll-choice-bar {
+        background-image: linear-gradient(#e8e8e8,#d8d8d8);
+    }
+    .poll-meter.leader .poll-choice-bar {
+        background-color: red;
+        background-position: 0px -140px;
+        background-image: var(--spritesheet);
+        background-repeat: repeat-x;
+    }
+    .poll-meter.leader {
+        color: white;
+    }
+
+    /* old checkmark */
+
+    .blue {
+        background-image: var(--checkmark);
+        background-repeat: no-repeat;
+
+        width: 16px;
+        height: 16px;
+
+        margin-top: 1px;
+    }
+
+    .profile-card .blue {
+        margin-bottom: -3px;
+        margin-top: 0px;
+    }
+
+    .blue::before {
+        content: "" !important;
+    }
+
+    .blue > div {
+        display: none !important;
+    }
+
+    /* rest */
+
+    body {
+        --bg_color: #E6ECF0;
+        --fg_color: #0F0F0F;
+        --fg_faded: #657786;
+        --fg_dark: var(--fg_faded);
+        --fg_nav: var(--accent);
+
+        --bg_panel: #FFFFFF;
+        --bg_elements: #FDFDFD;
+        --bg_overlays: #FFFFFF;
+        --bg_hover: #F5F8FA;
+
+        --grey: var(--fg_faded);
+        --dark_grey: #D6D6D6;
+        --darker_grey: #CECECE;
+        --darkest_grey: #ECECEC;
+        --border_grey: #E6ECF0;
+
+        --accent: #1DA1F2;
+        --accent_light: #A0EDFF;
+        --accent_dark: var(--accent);
+        --accent_border: #1DA1F296;
+
+        --play_button: #D84D4D;
+        --play_button_hover: #FF6C60;
+
+        --more_replies_dots: #0199F7;
+        --error_red: #FF7266;
+
+        --verified_blue: var(--accent);
+        --icon_text: #F8F8F2;
+
+        --tab: var(--accent);
+        --tab_selected: #000000;
+
+        --profile_stat: var(--fg_dark);
+    }
