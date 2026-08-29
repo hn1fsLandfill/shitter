@@ -64,7 +64,7 @@
     }
 
     /* early 2014 buttons */
-    button, [for=search-panel-toggle], .checkbox {
+    button, [for=search-panel-toggle], .checkbox, .show-more > a {
         background-color: #ddd;
         background-repeat: repeat-x;
         background-image: -webkit-linear-gradient(#fff,#ddd);
@@ -76,7 +76,7 @@
         cursor: pointer;
         border-radius: 4px;
         -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.5);
-        box-shadow: 0 1px 0 rgba(255,255,255,0.5)
+        box-shadow: 0 1px 0 rgba(255,255,255,0.5);
     }
 
     button {
@@ -85,7 +85,7 @@
         font-weight: bold;
     }
 
-    button:focus, button:hover, [for=search-panel-toggle]:hover, .checkbox:hover {
+    button:focus, button:hover, [for=search-panel-toggle]:hover, .checkbox:hover, .show-more > a:hover {
         text-decoration: none;
         background-color: #d8d8d8;
         background-image: -webkit-linear-gradient(#f8f8f8,#d8d8d8);
@@ -93,7 +93,7 @@
         border-color: #bbb;
     }
 
-    button:active, [for=search-panel-toggle]:active, .checkbox:active {
+    button:active, [for=search-panel-toggle]:active, .checkbox:active, .show-more > a:active {
         color: #333;
         border-color: #bbb;
         background-image: none;
@@ -125,6 +125,14 @@
 
     .overlay-panel, .timeline-container > *, .timeline > div {
         border-radius: 4px;
+    }
+
+    .tab-item.active a {
+        border-bottom-color: transparent;
+    }
+
+    .show-more > a {
+	height: 18px;
     }
 
     /* polls stuff */
