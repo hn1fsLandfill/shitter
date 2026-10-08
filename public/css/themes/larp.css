@@ -154,7 +154,7 @@
 
     /* old checkmark */
 
-    .blue {
+    .blue, .business {
         background-image: var(--checkmark);
         background-repeat: no-repeat;
 
@@ -162,6 +162,11 @@
         height: 16px;
 
         margin-top: 1px;
+    }
+
+    /* business checkmark */
+    .business {
+	filter: hue-rotate(205deg) brightness(1.2) !important;
     }
 
     .profile-card .blue {
