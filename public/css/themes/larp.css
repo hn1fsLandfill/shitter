@@ -169,16 +169,16 @@
 	filter: hue-rotate(205deg) brightness(1.2) !important;
     }
 
-    .profile-card .blue {
+    .profile-card .blue, .business {
         margin-bottom: -3px;
         margin-top: 0px;
     }
 
-    .blue::before {
+    .blue::before, .business::before {
         content: "" !important;
     }
 
-    .blue > div {
+    .blue > div, .business > div {
         display: none !important;
     }
 
